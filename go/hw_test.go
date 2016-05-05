@@ -4,8 +4,33 @@
 package hw
 
 import (
+	"fmt"
 	"testing"
 )
+
+func Example() {
+	// example
+	msg := Hw()
+	fmt.Println(msg)
+	// Output:
+	// hello,world
+}
+
+func ExampleHw() {
+	// example hw
+	msg := Hw()
+	fmt.Println(msg)
+	// Output:
+	// hello,world
+}
+
+func ExampleHwI() {
+	// example hw interface
+	msg := HwI(int(42))
+	fmt.Println(msg)
+	// Output:
+	// hello,world int 42
+}
 
 func TestHw(t *testing.T) {
 	out := Hw()
@@ -31,4 +56,10 @@ func TestHwI(t *testing.T) {
 		}
 	}
 
+}
+
+func BenchmarkHw(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Hw()
+	}
 }
