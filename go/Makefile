@@ -1,4 +1,4 @@
-.PHONY: doc docd cover test cover bench
+.PHONY: doc docd cover test bench
 
 doc:
 	godoc github.com/yubo/hw/go
